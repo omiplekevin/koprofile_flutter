@@ -32,7 +32,7 @@ class ExperienceCell extends StatelessWidget {
                 ...experienceValue.map(
                   (v) => Padding(
                     padding: EdgeInsetsGeometry.all(4),
-                    child: Image.asset(v, width: 28, height: 28),
+                    child: Image.asset(v, width: 32, height: 32),
                   ),
                 ),
               ],
@@ -49,7 +49,7 @@ class ExperienceCell extends StatelessWidget {
                 experienceValue.join(", "),
                 style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                   fontWeight: FontWeight.w900,
-                  fontSize: 14,
+                  fontSize: 16,
                 ),
               ),
             )
