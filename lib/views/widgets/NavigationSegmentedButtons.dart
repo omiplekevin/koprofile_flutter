@@ -11,11 +11,11 @@ class NavigationSegmentedButtons extends StatefulWidget {
       _NavigationSegmentedButtonsState();
 }
 
-enum Menu { home, work, contact }
+enum Menu { profile, work, contact }
 
 class _NavigationSegmentedButtonsState
     extends State<NavigationSegmentedButtons> {
-  Menu selectedMenu = Menu.home;
+  Menu selectedMenu = Menu.profile;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class _NavigationSegmentedButtonsState
       showSelectedIcon: false,
       segments: const <ButtonSegment<Menu>>[
         ButtonSegment<Menu>(
-          value: Menu.home,
+          value: Menu.profile,
           label: null,
           icon: Icon(Icons.home),
         ),

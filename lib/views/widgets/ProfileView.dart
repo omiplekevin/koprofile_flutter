@@ -9,7 +9,7 @@ class ProfileView extends StatelessWidget {
     return SingleChildScrollView(
       child: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: ProfileQuickStats(),
+        child: Column(children: [ProfileQuickStats(), SizedBox(height: 16)]),
       ),
     );
   }

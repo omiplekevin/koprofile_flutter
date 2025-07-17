@@ -11,7 +11,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  Menu currentSelectedMenu = Menu.home;
+  Menu currentSelectedMenu = Menu.profile;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
         child: Builder(
           builder: (context) {
             switch (currentSelectedMenu) {
-              case Menu.home:
+              case Menu.profile:
                 return ProfileView();
               case Menu.work:
                 return Text('Work history');
