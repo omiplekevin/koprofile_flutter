@@ -25,6 +25,7 @@ class _NavigationSegmentedButtonsState
         foregroundColor: Colors.blueGrey,
         selectedBackgroundColor: Colors.blueGrey,
         selectedForegroundColor: Colors.white,
+        iconSize: 32,
       ),
       showSelectedIcon: false,
       segments: const <ButtonSegment<Menu>>[
