@@ -4,18 +4,22 @@ import 'package:flutter/material.dart';
 class ExperienceCell extends StatelessWidget {
   final String experienceTitle;
   final List<String> experienceValue;
+  final int index;
 
   const ExperienceCell({
     super.key,
     required this.experienceTitle,
     required this.experienceValue,
+    required this.index,
   });
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: index % 2 == 0
+            ? CrossAxisAlignment.end
+            : CrossAxisAlignment.start,
         children: [
           Text(
             experienceTitle.toUpperCase(),
@@ -27,7 +31,7 @@ class ExperienceCell extends StatelessWidget {
           ),
           if (experienceTitle == "Languages")
             Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 ...experienceValue.map(
                   (v) => Padding(
@@ -46,6 +50,7 @@ class ExperienceCell extends StatelessWidget {
                 }
               },
               child: Text(
+                textAlign: index % 2 == 0 ? TextAlign.end : TextAlign.start,
                 experienceValue.join(", "),
                 style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                   fontWeight: FontWeight.w900,

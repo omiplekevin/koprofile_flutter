@@ -31,17 +31,14 @@ class _HomePageState extends State<HomePage> {
           },
         ),
       ),
-      bottomNavigationBar: ConstrainedBox(
-        constraints: const BoxConstraints(maxWidth: 512),
-        child: Padding(
-          padding: EdgeInsetsGeometry.all(16),
-          child: NavigationSegmentedButtons(
-            onMenuChanged: (value) {
-              setState(() {
-                currentSelectedMenu = value;
-              });
-            },
-          ),
+      bottomNavigationBar: Padding(
+        padding: EdgeInsetsGeometry.all(16.0),
+        child: NavigationSegmentedButtons(
+          onMenuChanged: (value) {
+            setState(() {
+              currentSelectedMenu = value;
+            });
+          },
         ),
       ),
     );

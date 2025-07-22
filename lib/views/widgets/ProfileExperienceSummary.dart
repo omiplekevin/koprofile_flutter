@@ -28,17 +28,20 @@ class ProfileExperienceSummary extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 8.0),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
+              spacing: 16.0,
               children: [
                 // First item in the row
                 ExperienceCell(
                   experienceTitle: entries[i].key,
                   experienceValue: entries[i].value,
+                  index: i,
                 ),
                 // Second item in the row, if exists
                 if (i + 1 < entries.length)
                   ExperienceCell(
                     experienceTitle: entries[i + 1].key,
                     experienceValue: entries[i + 1].value,
+                    index: i + 1,
                   ),
               ],
             ),

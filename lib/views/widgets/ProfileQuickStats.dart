@@ -11,9 +11,9 @@ class ProfileQuickStats extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(32.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
           children: [
             //Quick intro
@@ -39,8 +39,9 @@ class ProfileQuickStats extends StatelessWidget {
             ),
             //Name
             Align(
-              alignment: Alignment.centerLeft,
+              alignment: kIsWeb ? Alignment.center : Alignment.centerLeft,
               child: Text(
+                textAlign: TextAlign.center,
                 "Kevin Jimenez Omiple".toUpperCase(),
                 style: Theme.of(context).textTheme.headlineLarge?.copyWith(
                   fontWeight: FontWeight.bold,
