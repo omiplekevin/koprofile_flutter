@@ -15,6 +15,7 @@ class ExperienceCell extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double textSize = 20;
     return Expanded(
       child: Column(
         crossAxisAlignment: index % 2 == 0
@@ -54,7 +55,7 @@ class ExperienceCell extends StatelessWidget {
                 experienceValue.join(", "),
                 style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                   fontWeight: FontWeight.w900,
-                  fontSize: 16,
+                  fontSize: textSize,
                 ),
               ),
             )
@@ -63,7 +64,7 @@ class ExperienceCell extends StatelessWidget {
               experienceValue[0],
               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                 fontWeight: FontWeight.w900,
-                fontSize: 14,
+                fontSize: textSize,
               ),
             ),
         ],

@@ -33,12 +33,15 @@ class _HomePageState extends State<HomePage> {
       ),
       bottomNavigationBar: Padding(
         padding: EdgeInsetsGeometry.all(16.0),
-        child: NavigationSegmentedButtons(
-          onMenuChanged: (value) {
-            setState(() {
-              currentSelectedMenu = value;
-            });
-          },
+        child: ConstrainedBox(
+          constraints: BoxConstraints(maxWidth: 800),
+          child: NavigationSegmentedButtons(
+            onMenuChanged: (value) {
+              setState(() {
+                currentSelectedMenu = value;
+              });
+            },
+          ),
         ),
       ),
     );
