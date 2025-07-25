@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:koprofile_flutter/view/WorkPage.dart';
-import 'package:koprofile_flutter/view/widgets/NavigationSegmentedButtonsVIew.dart';
+import 'package:koprofile_flutter/view/widgets/NavSegmentedButtonsView.dart';
 import 'package:koprofile_flutter/view/widgets/ProfileStackView.dart';
 
 class HomePage extends StatefulWidget {
