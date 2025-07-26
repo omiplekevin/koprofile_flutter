@@ -52,8 +52,8 @@ class Work {
   }
 
   static String _formatDate(int dateMillis) {
-    final DateTime now = DateTime(dateMillis);
+    final DateTime time = DateTime.fromMillisecondsSinceEpoch(dateMillis);
     final DateFormat formatter = DateFormat('MMMM y');
-    return formatter.format(now);
+    return formatter.format(time);
   }
 }

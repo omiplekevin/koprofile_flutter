@@ -15,17 +15,17 @@ enum Menu { profile, work, contact }
 
 class _NavigationSegmentedButtonsState
     extends State<NavigationSegmentedButtons> {
-  Menu selectedMenu = Menu.work;
+  Menu selectedMenu = Menu.profile;
 
   @override
   Widget build(BuildContext context) {
     return SegmentedButton<Menu>(
       style: SegmentedButton.styleFrom(
-        backgroundColor: Colors.white,
-        foregroundColor: Colors.blueGrey,
-        selectedBackgroundColor: Colors.blueGrey,
-        selectedForegroundColor: Colors.white,
-        iconSize: 32,
+        backgroundColor: Colors.black87,
+        foregroundColor: Colors.lime,
+        selectedBackgroundColor: Colors.lime,
+        selectedForegroundColor: Colors.black87,
+        iconSize: 28,
       ),
       showSelectedIcon: false,
       segments: const <ButtonSegment<Menu>>[

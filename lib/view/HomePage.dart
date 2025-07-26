@@ -12,7 +12,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  Menu currentSelectedMenu = Menu.work;
+  Menu currentSelectedMenu = Menu.profile;
 
   @override
   Widget build(BuildContext context) {
@@ -34,15 +34,12 @@ class _HomePageState extends State<HomePage> {
       ),
       bottomNavigationBar: Padding(
         padding: EdgeInsetsGeometry.all(16.0),
-        child: ConstrainedBox(
-          constraints: BoxConstraints(maxWidth: 800),
-          child: NavigationSegmentedButtons(
-            onMenuChanged: (value) {
-              setState(() {
-                currentSelectedMenu = value;
-              });
-            },
-          ),
+        child: NavigationSegmentedButtons(
+          onMenuChanged: (value) {
+            setState(() {
+              currentSelectedMenu = value;
+            });
+          },
         ),
       ),
     );

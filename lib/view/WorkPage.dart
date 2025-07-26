@@ -12,8 +12,8 @@ class WorkPage extends StatelessWidget {
 
     debugPrint("WorkPage: isLoading = ${viewModel.isLoading}");
 
-    return Padding(
-      padding: EdgeInsetsGeometry.all(16.0),
+    return ConstrainedBox(
+      constraints: BoxConstraints(maxWidth: 800),
       child: viewModel.isLoading
           ? const Center(child: CircularProgressIndicator())
           : WorkHistoryListView(viewModel.workHistory),
